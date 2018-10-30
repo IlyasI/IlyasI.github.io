@@ -131,7 +131,7 @@ $(document).ready(function(w) {
                 var limit = Math.random() * 0.5;
 
                 if (dist > limit) {
-                    ctx.lineWidth = 2;
+                    ctx.lineWidth = 1.5;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p.px, p.py);
