@@ -227,8 +227,8 @@ $(document).ready(function(w) {
     }
 
     function random_movement(cell_data, pen_size) {
-        cell_data.xv += (Math.random()*3) - 1.5;
-        cell_data.yv += (Math.random()*3) - 1.5;
+        cell_data.xv += (Math.random()*4) - 2;
+        cell_data.yv += (Math.random()*4) - 2;
     }
 
     function update_pressure(cell_data) {

@@ -21,8 +21,8 @@ br{
     pointer-events: none;
 }
 .details{
-    width:300px;
-    min-width:300px;
+    width:330px;
+    min-width:330px;
     font-family: "Consolas", "monaco", "monospace";
     pointer-events: none;
     color: #FFF;
@@ -31,7 +31,7 @@ br{
     margin-top: 100px;
 }
 .email{
-    font-size: 24px;
+    font-size: 23px;
     pointer-events:auto;
 }
 .social-icons{
