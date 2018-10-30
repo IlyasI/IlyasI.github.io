@@ -21,8 +21,8 @@ br{
     pointer-events: none;
 }
 .details{
-    width:330px;
-    min-width:330px;
+    width:350px;
+    min-width:350px;
     font-family: "Consolas", "monaco", "monospace";
     pointer-events: none;
     color: #FFF;
