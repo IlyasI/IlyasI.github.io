@@ -131,7 +131,7 @@ $(document).ready(function(w) {
                 var limit = Math.random() * 0.5;
 
                 if (dist > limit) {
-                    ctx.lineWidth = 1;
+                    ctx.lineWidth = 2;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p.px, p.py);
@@ -199,7 +199,6 @@ $(document).ready(function(w) {
                 var cell_data = cell_datas[j];
 
                 update_velocity(cell_data);
-
             }
         }
 
@@ -207,7 +206,6 @@ $(document).ready(function(w) {
         mouse.py = mouse.y;
 
         requestAnimationFrame(draw);
-
     }
 
     function change_cell_velocity(cell_data, mvelX, mvelY, pen_size) {
