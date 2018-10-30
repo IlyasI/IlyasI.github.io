@@ -49,7 +49,7 @@ br{
     min-width: 300px;
     font-family: "Tahoma", "Verdana", "Segoe", "sans-serif";
     pointer-events: none;
-    font-size: 13px;
+    font-size: 14px;
 }
 .fa{
     pointer-events: auto;
