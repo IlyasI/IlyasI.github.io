@@ -26,6 +26,7 @@ br{
     pointer-events: none;
 }
 .details{
+    font-size: 26px;
     width:300px;
     min-width:300px;
     font-family: "Consolas", "monaco", "monospace";
@@ -36,6 +37,7 @@ br{
     margin-top: 100px;
 }
 .email{
+    font-size: 18px
     pointer-events:auto;
 }
 .social-icons{
@@ -49,7 +51,7 @@ br{
     min-width: 300px;
     font-family: "Tahoma", "Verdana", "Segoe", "sans-serif";
     pointer-events: none;
-    font-size: 14px;
+    font-size: 16px;
 }
 .fa{
     pointer-events: auto;
@@ -67,7 +69,7 @@ br{
     background-color: rgba(0,0,0,0);
     border: none;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 }
 .about-container{
