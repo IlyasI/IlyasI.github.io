@@ -22,7 +22,7 @@ br{
 }
 .details{
     width:400px;
-    min-width:400px;
+    max-width:100%;
     font-family: "Consolas", "monaco", "monospace";
     pointer-events: none;
     color: #FFF;
