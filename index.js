@@ -18,7 +18,7 @@ $(document).ready(function(w) {
      	pen_size = 40; //Radius around the mouse cursor coordinates to reach when stirring
      	num_cols = canvas_width / resolution; //This value is the number of columns in the grid.
      	num_rows = canvas_height / resolution; //This is number of rows.
-     	speck_count = Math.min(Math.pow((canvas_width + canvas_height),1.15), 800);
+     	speck_count = Math.min(Math.pow((canvas_width + canvas_height),1.15), 1600);
         console.log(Math.pow((canvas_width+canvas_height),1.15));
      	vec_cells = []; //The array that will contain the grid cells
 	    particles = []; //The array that will contain the particles
