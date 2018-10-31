@@ -303,7 +303,6 @@ $(document).ready(function(w) {
 
 
     function mouse_down_handler(e) {
-        jQuery(".drag-me").fadeOut(1500);
         e.preventDefault(); //Prevents the default action from happening (e.g. navigation)
         mouse.down = true; //Sets the mouse object's "down" value to true
     }
@@ -317,6 +316,9 @@ $(document).ready(function(w) {
     }
 
     function mouse_move_handler(e) {
+        if(mouse.down){
+            jQuery(".drag-me").fadeOut(1500);
+        }
         mouse.px = mouse.x;
         mouse.py = mouse.y;
 
@@ -329,6 +331,10 @@ $(document).ready(function(w) {
     }
 
     function touch_move_handler(e) {
+        if(mouse.down){
+            jQuery(".drag-me").fadeOut(1500);
+        }
+
         mouse.px = mouse.x;
         mouse.py = mouse.y;
 
