@@ -163,8 +163,8 @@ $(document).ready(function(w) {
     }
 
     function draw() {
-        var mouse_xv = mouse.x - mouse.px;
-        var mouse_yv = mouse.y - mouse.py;
+        var mouse_xv = Math.min(mouse.x - mouse.px, 100);
+        var mouse_yv = Math.min(mouse.y - mouse.py, 100);
 
         for (i = 0; i < vec_cells.length; i++) {
             var cell_datas = vec_cells[i];
