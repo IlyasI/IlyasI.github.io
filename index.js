@@ -8,7 +8,7 @@ $(document).ready(function(w) {
          	down: false
      	};
 
-     	resolution = 1;
+     	resolution = 20;
 
      	canvas_width = Math.round((window.innerWidth || document.documentElement.clientWidth
                          || document.body.clientWidth)/resolution)*resolution;
