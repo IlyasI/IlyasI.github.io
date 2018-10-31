@@ -135,8 +135,6 @@ $(document).ready(function(w) {
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p.px, p.py);
                     ctx.stroke();
-                    ctx.font = "30px Arial";
-                    ctx.strokeText("Pls Hire Me", 20, 20);
 
                 }else{
 
@@ -144,8 +142,6 @@ $(document).ready(function(w) {
                     ctx.moveTo(p.x, p.y);
 
                     ctx.lineTo(p.x + limit, p.y + limit);
-                    ctx.font = "30px Arial";
-                    ctx.strokeText("Pls Hire Me", 20, 20);
                     ctx.stroke();
                 }
 
