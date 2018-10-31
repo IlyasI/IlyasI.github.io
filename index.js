@@ -19,7 +19,7 @@ $(document).ready(function(w) {
      	num_cols = canvas_width / resolution; //This value is the number of columns in the grid.
      	num_rows = canvas_height / resolution; //This is number of rows.
      	speck_count = Math.min(Math.pow((canvas_width + canvas_height),1.15), 800);
-
+        console.log(Math.pow((canvas_width+canvas_height),1.15));
      	vec_cells = []; //The array that will contain the grid cells
 	    particles = []; //The array that will contain the particles
 
