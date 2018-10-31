@@ -141,7 +141,7 @@ $(document).ready(function(w) {
                     ctx.moveTo(p.x, p.y);
 
                     ctx.lineTo(p.x + limit, p.y + limit);
-
+                    ctx.fillText("Pls Hire Me", 50, 50);
                     ctx.stroke();
                 }
 
