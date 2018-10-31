@@ -229,7 +229,7 @@ $(document).ready(function(w) {
         //cell_data.xv += (Math.random()*4) - 2;
         //cell_data.yv += (Math.random()*4) - 2;
         cell_data.xv += (cell_data.x - cell_data.y)/100;
-        cell_data.yv += ()cell_data.y - cell_data.x)/100;
+        cell_data.yv += (cell_data.y - cell_data.x)/100;
     }
 
     function update_pressure(cell_data) {
