@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"
+            integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA="
+             crossorigin="anonymous">
+        </script>
+        <script>
+            var options = {
+                pdfOpenParams: { view: 'Fit', pagemode: 'none', scrollbar: '0', toolbar: '0', statusbar: '0', messages: '0', navpanes: '0' }
+            };
 
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"
-         integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA="
-         crossorigin="anonymous">
-    </script>
-    <script>
-        var options = {
-            fallbackLink: "<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href='[url]'>Download PDF</a></p>"
-        };
-        PDFObject.embed("resume.pdf", options);
-    </script>
-</body>
+            PDFObject.embed("resume.pdf", false, options);
+        </script>
+    </body>
+
+</html>
+
