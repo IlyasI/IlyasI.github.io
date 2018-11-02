@@ -30,12 +30,33 @@ br{
     position:relative;
     margin-top: 100px;
 }
+.name{
+    font-size: 6.5vw;
+    display: inline-block;
+}
 .email{
-    font-size: 23px;
+    display: inline-block;    
+    font-size: 4vw;
     pointer-events:auto;
 }
+@media screen and (min-width: 575px) {
+    .email{
+        font-size: 23px;
+    }
+    .name{
+        font-size: 37.375px; 
+    }
+}
+@media screen and (max-width: 400px) {
+    .email{
+        font-size: 16px;
+    }
+    .name{
+        font-size: 26px;
+    }
+}
 .social-icons{
-    min-width:300px;
+    min-width:400px;
     pointer-events: none;
     text-decoration: none;
     position:relative;
