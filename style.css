@@ -62,7 +62,7 @@ br{
     }
 }
 .social-icons{
-    min-width:400px;
+    min-width: 400px;
     pointer-events: none;
     text-decoration: none;
     position:relative;
