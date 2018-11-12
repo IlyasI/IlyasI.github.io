@@ -20,18 +20,8 @@
         gtag('js', new Date());
         gtag('config', 'UA-128413548-1');
     </script>
-    <script>
-	if(PDFObject.supportsPDFs){
-	    console.log("This browser supports embedded pdfs.");
-	    document.getElementById('embedded-resume').style.display = 'block';
-	} else {
-	    console.log("This browser does not support embedded pdfs.");
-	    document.getElementById('embedded-resume').style.display = 'none';		
-	}
-    </script>
-
-    <canvas id="c"></canvas>
-  
+    
+    <canvas id="c"></canvas> 
   </head>
 
   <body>
@@ -122,6 +112,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"
         integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA=" 
         crossorigin="anonymous">
+    </script>
+    <script>
+	if(PDFObject.supportsPDFs){
+	    console.log("This browse supports embedded pdfs.");
+	    document.getElementById('embedded-resume').style.display = 'block';
+	} else {
+	    console.log("This browser des not support embedded pdfs.");
+	    document.getElementById('embedded-resume').style.display = 'none';		
+	}
     </script>
     <script src="index.js"></script>
   </body>
