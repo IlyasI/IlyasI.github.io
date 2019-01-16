@@ -1,3 +1,4 @@
+//Background particle physics adapted from Florian Cordillot on CodePen: https://codepen.io/fcordillot/pen/ZaGgRy
 $(document).ready(function(w) {
     function init() {
      	mouse = {
