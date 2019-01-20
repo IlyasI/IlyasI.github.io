@@ -1,4 +1,5 @@
 //Background particle physics adapted from Florian Cordillot on CodePen: https://codepen.io/fcordillot/pen/ZaGgRy
+
 $(document).ready(function(w) {
     function init() {
      	mouse = {
@@ -17,11 +18,11 @@ $(document).ready(function(w) {
                          || document.body.clientHeight)/resolution)*resolution;
 
      	pen_size = 40; //Radius around the mouse cursor coordinates to reach when stirring
-     	num_cols = canvas_width / resolution; //This value is the number of columns in the grid.
-     	num_rows = canvas_height / resolution; //This is number of rows.
+     	num_cols = canvas_width / resolution;
+     	num_rows = canvas_height / resolution;
      	speck_count = Math.min(Math.pow((canvas_width + canvas_height),1.15), 6000);
-     	vec_cells = []; //The array that will contain the grid cells
-	    particles = []; //The array that will contain the particles
+     	vec_cells = [];
+	particles = [];
 
 
         canvas = document.getElementById("c");
@@ -44,10 +45,6 @@ $(document).ready(function(w) {
 
                 vec_cells[col][row] = cell_data;
 
-                /*
-                These two lines set the object's column and row values so the object knows
-                where in the grid it is positioned.
-                */
                 vec_cells[col][row].col = col;
                 vec_cells[col][row].row = row;
 
@@ -81,7 +78,7 @@ $(document).ready(function(w) {
             }
         }
 
-	    w.addEventListener("resize", init);
+	w.addEventListener("resize", init);
         w.addEventListener("mousedown", mouse_down_handler);
         w.addEventListener("touchstart", mouse_down_handler);
 
@@ -234,12 +231,12 @@ $(document).ready(function(w) {
     function update_pressure(cell_data) {
 
         var pressure_x = (
-            cell_data.up_left.xv * 0.5 //Divided in half because it's diagonal
+            cell_data.up_left.xv * 0.5 
             + cell_data.left.xv
-            + cell_data.down_left.xv * 0.5 //Same
-            - cell_data.up_right.xv * 0.5 //Same
+            + cell_data.down_left.xv * 0.5
+            - cell_data.up_right.xv * 0.5
             - cell_data.right.xv
-            - cell_data.down_right.xv * 0.5 //Same
+            - cell_data.down_right.xv * 0.5
         );
 
         var pressure_y = (
@@ -304,8 +301,8 @@ $(document).ready(function(w) {
 
 
     function mouse_down_handler(e) {
-        e.preventDefault(); //Prevents the default action from happening (e.g. navigation)
-        mouse.down = true; //Sets the mouse object's "down" value to true
+        e.preventDefault();
+        mouse.down = true;
     }
 
     function mouse_up_handler() {
@@ -313,7 +310,7 @@ $(document).ready(function(w) {
     }
 
     function touch_end_handler(e) {
-        if (!e.touches) mouse.down = false; //If there are no more touches on the screen, sets "down" to false.
+        if (!e.touches) mouse.down = false;
     }
 
     function mouse_move_handler(e) {
@@ -351,7 +348,7 @@ $(document).ready(function(w) {
         initialize: init
     }
 
-}(window)); //Passes "window" into the self-invoking function.
+}(window));
 
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 
