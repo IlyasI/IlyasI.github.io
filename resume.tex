@@ -1,0 +1,233 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Editor : Ilyas Ibragimov
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% Custom colors
+\definecolor{sectionblue}{RGB}{30, 50, 80}
+\definecolor{dividerline}{RGB}{210, 210, 210}
+
+% Hyperlink styling
+\hypersetup{colorlinks=true, urlcolor=sectionblue, linkcolor=sectionblue}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\color{sectionblue}
+}{}{0em}{}[\color{sectionblue}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      {\small\color{sectionblue}\textbf{#3}} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingLarger}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      \textit{\small #3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEduHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      \textit{\small #3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength{\itemsep}{1pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge \scshape \color{sectionblue} ILYAS IBRAGIMOV} \\ \vspace{-1pt}
+    \small Brooklyn, NY $|$
+    \href{mailto:ilyas.ibragimov@outlook.com}{ilyas.ibragimov@outlook.com} $|$
+    \href{https://www.linkedin.com/in/ilyasi/}{linkedin.com/in/ilyasi}
+    $|$
+    \href{https://ilyasi.com}{ilyasi.com}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Software engineer with 6+ years building platform infrastructure and trading systems at quantitative hedge funds. At Two Sigma, backend engineer on firm-wide cost and metrics systems in Python, dbt, BigQuery, and SQL, with multiple LLM-powered tools in production. Previously built Python portfolio analytics, optimized C++ trading systems, and integrated exchange connections.
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Software Developer}{Nov. 2022 -- Present}
+      {Two Sigma (via Randstad Digital)}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Built and maintained the ELT pipeline for a firm-wide cost transparency platform over 3 years with Python, dbt, and BigQuery: 8+ disparate data sources, 15+ TB of usage data daily across hundreds of products, \$80MM+ in annual spend. Became sole backend engineer after the lead's departure.}
+        \resumeItem{Built a firm-wide metrics platform in Python, BigQuery, and SQL, ingesting hundreds of KPIs from multiple teams and sources for executive dashboards and team-level tracking.}
+        \resumeItem{Onboarded a new engineer to the team and together decomposed an inherited legacy monolith into 5 loosely coupled pipelines with dedicated CI/CD, automated testing, and programmatic data ingestion.}
+        \resumeItem{Drove early adoption of dbt (Data Build Tool) at the firm. Co-authored the internal best practices guide, built quickstart repos, and gave presentations that accelerated usage across multiple teams. Led the migration from Apptio to Python, dbt, and BigQuery, delivering \$1MM+ in annual savings and 65\% faster processing.}
+        \resumeItem{Created an LLM-powered department reorganization detection system: a pipeline using Claude and Vertex AI that analyzes employee movement patterns, classifies organizational changes, and applies retroactive cost corrections. Eliminated weeks of manual investigation per reorganization.}
+        \resumeItem{Designed an automated incident response system with GitHub issue creation, Slack alerting, and AI-generated root-cause analysis via Claude Code. Hardened ELT pipelines with schema drift auto-recovery, exponential backoff retries, and safe handling of upstream outages.}
+        \resumeItem{Built a PowerPoint generation framework for Claude Code: fully editable, branded decks with employee photo lookups, auto-generated figures and tables, and Google Workspace uploads. Includes custom skills, prompts, assets, JavaScript rendering scripts, and Playwright layout tests.}
+      \resumeItemListEnd
+    \vspace{2pt}
+
+    \resumeSubheading
+      {Software Developer}{Jan. 2020 -- Nov. 2022}
+      {Blueshift Asset Management}{Red Bank, NJ}
+      \resumeItemListStart
+        \resumeItem{Built a real-time portfolio monitoring platform with terminal-based GUI, automated investor reporting, and historical performance tracking. Reduced analysis time by 65\% and supported \$500M+ in managed assets.}
+        \resumeItem{Optimized the fund's proprietary C++ trading platform, reducing storage by tens of terabytes and production server load by 40\%.}
+        \resumeItem{Integrated with multiple equity and crypto exchanges and built Python/Selenium data scrapers feeding alternative data research: social media signals, transcribed investor calls, and market sentiment analysis.}
+        \resumeItem{Designed a real-time compliance monitoring system automatically flagging banned tickers and improper trade amounts before execution, preventing regulatory violations.}
+      \resumeItemListEnd
+    \vspace{2pt}
+
+    \resumeSubheading
+      {Platform Development Intern}{July 2018 -- Sep. 2018}
+      {Fidessa}{Woking, UK}
+      \resumeItemListStart
+        \resumeItem{Built a secure file transmission platform in Java and JavaScript that eliminated recurring data breaches affecting 200+ clients, replacing vulnerable manual processes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL (BigQuery), C++, Bash, JavaScript} \\
+     \textbf{Data \& Analytics}{: dbt, BigQuery, PostgreSQL, Dimensional Modeling, ELT Pipeline Design} \\
+     \textbf{Cloud \& Infrastructure}{: GCP (BigQuery, GCS), AWS, Docker, GitHub Actions, Linux/Unix} \\
+     \textbf{AI/LLM}{: Claude Code, Claude API, Claude Skills, MCP Servers, Agentic Workflows, Test-Driven LLM Development} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, Datadog, Jira, Slack, Google Workspace, Excel, REST APIs} \\
+     \textbf{Frameworks \& Testing}{: Flask, Django, Playwright, Selenium}
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEduHeading
+      {University College London (UCL)}{London, UK}
+      {Master of Engineering (Electronic \& Electrical), First Class Honors (4.0 GPA Equivalent)}{2019}
+    \resumeEduHeading
+      {Baruch College MFE Program}{New York, NY}
+      {C++ Programming for Financial Engineering Certificate, Distinction}{2020}
+    \resumeEduHeading
+      {Brooklyn Technical High School}{Brooklyn, NY}
+      {High School Diploma, Mathematics Major, Math Team, 4.0 GPA}{2015}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeSubheadingLarger
+        {Network Packet Routing with Deep Reinforcement Learning}{MEng Thesis, First Class Honors}
+        {University College London (UCL)}{2019}
+        \resumeItemListStart
+          \resumeItem{Developed deep reinforcement learning models for optimal packet routing in software-defined networks using Python, OpenAI Gym, and TensorFlow.}
+        \resumeItemListEnd
+      \resumeSubheadingLarger
+        {Deep Learning Applications in Cryptocurrency Trading}{BEng Thesis, First Class Honors}
+        {University College London (UCL)}{2018}
+        \resumeItemListStart
+          \resumeItem{Built and refined LSTM networks for cryptocurrency return prediction using Python/Keras with extensive feature engineering and data mining.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
