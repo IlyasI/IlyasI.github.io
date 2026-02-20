@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e18"/>
+      <stop offset="100%" stop-color="#0d1220"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid dots -->
+  <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="20" cy="20" r="0.5" fill="#1e293b" opacity="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Accent line -->
+  <rect x="100" y="295" width="120" height="3" rx="1.5" fill="url(#accentGlow)"/>
+
+  <!-- Name -->
+  <text x="100" y="370" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="normal" fill="#f1f5f9" letter-spacing="-1">Ilyas Ibragimov</text>
+
+  <!-- Role -->
+  <text x="103" y="415" font-family="'Courier New', Consolas, monospace" font-size="22" fill="#cbd5e1" letter-spacing="1">Senior Software Developer</text>
+
+  <!-- Small accent dot after role -->
+  <circle cx="430" cy="409" r="3" fill="#38bdf8"/>
+
+  <!-- Domain -->
+  <text x="1100" y="590" font-family="'Courier New', Consolas, monospace" font-size="16" fill="#475569" text-anchor="end" letter-spacing="0.5">ilyasi.com</text>
+
+  <!-- Top-right subtle accent corner -->
+  <line x1="1150" y1="40" x2="1150" y2="80" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <line x1="1110" y1="40" x2="1150" y2="40" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+
+  <!-- Bottom-left subtle accent corner -->
+  <line x1="50" y1="550" x2="50" y2="590" stroke="#38bdf8" stroke-width="2" opacity="0.15"/>
+  <line x1="50" y1="590" x2="90" y2="590" stroke="#38bdf8" stroke-width="2" opacity="0.15"/>
+</svg>

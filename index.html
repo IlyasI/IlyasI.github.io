@@ -1,129 +1,346 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ilyas Ibragimov — Senior Software Developer. 6+ years building platform infrastructure and trading systems in financial technology. LLM-native engineer. Two Sigma.">
+    <meta name="theme-color" content="#0b0f1a">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Icon CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128413548-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-128413548-1');
+    <meta property="og:title" content="Ilyas Ibragimov — Senior Software Developer">
+    <meta property="og:description" content="6+ years building platform infrastructure and trading systems in financial technology. LLM-native engineer. Two Sigma.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ilyasi.com">
+    <meta property="og:image" content="https://ilyasi.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ilyas Ibragimov — Senior Software Developer">
+    <meta name="twitter:description" content="6+ years building platform infrastructure and trading systems in financial technology. LLM-native engineer. Two Sigma.">
+    <meta name="twitter:image" content="https://ilyasi.com/og-image.png">
+
+    <title>Ilyas Ibragimov — Senior Software Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ilyas Ibragimov",
+        "jobTitle": "Senior Software Developer",
+        "url": "https://ilyasi.com",
+        "email": "ilyas.ibragimov@outlook.com",
+        "sameAs": [
+            "https://github.com/IlyasI",
+            "https://www.linkedin.com/in/ilyasi"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University College London"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Two Sigma"
+        }
+    }
     </script>
-    
-    <canvas id="c"></canvas> 
-  </head>
+</head>
+<body>
+    <canvas id="canvas" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="details col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8 align-self-start shadow-lg">
-                <h2 class="name">
-                    Ilyas Ibragimov
-                </h2>
-                <a class="text-muted email" href="mailto:ilyas.ibragimov@outlook.com">
-                    ilyas.ibragimov@outlook.com
-                </a>
-            </div>
-        </div>        
-    </div>
+    <nav class="nav">
+        <a href="#about" class="nav-logo">~/ilyasi</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-summary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>about</a>
+            <a href="#experience">experience</a>
+            <a href="#projects">projects</a>
+            <a href="#skills">skills</a>
+            <a href="#education">education</a>
+            <a href="resume.pdf" download="IlyasIbragimov-Resume.pdf">resume.pdf</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
+        </div>
+    </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="about-container col-xl-6 col-lg-8 col-md-10 col-sm-10 col-11 shadow-lg">
-                <p class=about>
-                    Senior Software Developer @ Two Sigma (Contract)
-                    <br />
-                    Master of Engineering in Electronic and Electrical Engineering
-		    <br />
-		    Minor in Intelligent Systems
-                </p>
+    <!-- Terminal trigger button -->
+    <button class="terminal-trigger" id="terminal-trigger" aria-label="Open terminal">
+        <span class="terminal-trigger-icon">&gt;_</span>
+    </button>
+
+    <!-- Terminal -->
+    <div class="terminal" id="terminal" role="dialog" aria-label="Interactive terminal">
+        <div class="terminal-header">
+            <div class="terminal-dots"><span></span><span></span><span></span></div>
+            <span class="terminal-title">visitor@ilyasi.com</span>
+            <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output"></div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">visitor@ilyasi.com:~$&nbsp;</span>
+                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal input">
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div id="social-icons" 
-            class="social-icons col-xl-6 col-lg-8 
-            col-md-10 col-sm-12 col-12 shadow-lg">
-                <button onclick="window.open('https://github.com/IlyasI')" 
-                    class="social-button" type="button">
-                    <i class="fa fa-github-square"></i>
-                    GitHub
-                </button>
-                <button onclick="window.open('https://www.linkedin.com/in/ilyasi')" 
-                    class="social-button" type="button">
-                    <i class="fa fa-linkedin-square"></i>
-                    LinkedIn
-                </button>
-                <button class="social-button dropdown-toggle" 
-                    type="button" 
-                    id="dropdownMenuButton" 
-                    data-toggle="dropdown" 
-                    aria-haspopup="true" 
-                    aria-expanded="false">
+    <main class="page-content" id="top">
+        <header class="hero section" id="about">
+            <div class="hero-card">
+                <h1 class="hero-name">Ilyas Ibragimov</h1>
+                <p class="hero-title"><span class="typed" id="typed-title"></span><span class="cursor">_</span></p>
+                <p class="hero-about">
+                    6+ years building platform infrastructure and trading systems in
+                    financial technology. LLM-native engineer — multiple AI-powered tools
+                    in production using Claude and Vertex AI. At Two Sigma, backend engineer
+                    on firm-wide cost and metrics systems. Previously built Python portfolio
+                    analytics, optimized C++ trading systems, and integrated exchange
+                    connections at a quantitative hedge fund.
+                </p>
+                <div class="hero-stack">
+                    <span><svg viewBox="0 0 128 128" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176-5.014-.835-10.195-1.215-15.187-1.191-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811-2.681 11.12-2.8 17.919 0 29.53C7.614 86.983 12.569 93 21.054 93H31V79.952C31 70.315 39.428 62 49.33 62zm-1.838-39.11c-3.026 0-5.478-2.479-5.478-5.545 0-3.079 2.451-5.581 5.478-5.581 3.015 0 5.479 2.502 5.479 5.581-.001 3.066-2.465 5.545-5.479 5.545zm74.789 25.921C120.183 40.363 116.178 34 107.682 34H97v12.981C97 57.031 88.206 65 78.489 65H49.33C41.342 65 35 72.326 35 80.326v27.8c0 7.91 6.745 12.564 14.462 14.834 9.242 2.717 17.994 3.208 29.051 0C85.862 120.831 93 116.549 93 108.126V97H64v-4h43.682c8.484 0 11.647-5.776 14.599-14.66 3.047-9.145 2.916-17.799 0-29.529zm-41.955 55.606c3.027 0 5.479 2.479 5.479 5.547 0 3.076-2.451 5.579-5.479 5.579-3.015 0-5.478-2.502-5.478-5.579 0-3.068 2.463-5.547 5.478-5.547z"/></svg> Python</span>
+                    <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> SQL</span>
+                    <span><svg viewBox="0 0 128 128" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M63.443 0c-1.782 0-3.564.39-4.916 1.172L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.197c0 1.562.55 3.298 1.441 4.841l-.002.002c.89 1.543 2.123 2.89 3.475 3.672l46.931 27.094c2.703 1.562 7.13 1.562 9.832 0h.002l46.934-27.094c1.352-.78 2.582-2.129 3.473-3.672.89-1.543 1.441-3.28 1.441-4.843V36.779c0-1.557-.55-3.295-1.441-4.838v-.002c-.891-1.545-2.121-2.893-3.473-3.67L68.359 1.173C67.008.39 65.226 0 63.443 0zm.002 26.033c13.465 0 26.02 7.246 32.77 18.91l-16.38 9.479c-3.372-5.836-9.66-9.467-16.39-9.467-10.432 0-18.922 8.49-18.922 18.924S53.013 82.8 63.445 82.8c6.735 0 13.015-3.625 16.395-9.465l16.375 9.477c-6.746 11.662-19.305 18.91-32.77 18.91-20.867 0-37.843-16.977-37.843-37.844s16.976-37.844 37.843-37.844v-.002zM92.881 57.57h4.201v4.207h4.203v4.203h-4.203v4.207h-4.201V65.98h-4.207v-4.203h4.207V57.57zm15.765 0h4.208v4.207h4.203v4.203h-4.203v4.207h-4.208V65.98h-4.205v-4.203h4.205V57.57z"/></svg> C++</span>
+                    <span>dbt</span>
+                    <span>BigQuery</span>
+                    <span><svg viewBox="0 0 128 128" width="14" height="14" aria-hidden="true"><g fill="currentColor"><path d="M80.6 40.3h.4l-.2-.2 14-14v-.3c-11.8-10.4-28.1-14-43.2-9.5C36.5 20.8 24.9 32.8 20.7 48c.2-.1.5-.2.8-.2 5.2-3.4 11.4-5.4 17.9-5.4 2.2 0 4.3.2 6.4.6.1-.1.2-.1.3-.1 9-9.9 24.2-11.1 34.6-2.6h-.1z"/><path d="M108.1 47.8c-2.3-8.5-7.1-16.2-13.8-22.1L80 39.9c6 4.9 9.5 12.3 9.3 20v2.5c16.9 0 16.9 25.2 0 25.2H63.9v20h-.1l.1.2h25.4c14.6.1 27.5-9.3 31.8-23.1 4.3-13.8-1-28.8-13-36.9z"/><path d="M39 107.9h26.3V87.7H39c-1.9 0-3.7-.4-5.4-1.1l-15.2 14.6v.2c6 4.3 13.2 6.6 20.7 6.6z"/><path d="M40.2 41.9c-14.9.1-28.1 9.3-32.9 22.8-4.8 13.6 0 28.5 11.8 37.3l15.6-14.9c-8.6-3.7-10.6-14.5-4-20.8 6.6-6.4 17.8-4.4 21.7 3.8L68 55.2C61.4 46.9 51.1 42 40.2 42.1z"/></g></svg> GCP</span>
+                    <span><svg viewBox="0 0 128 128" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M124.8 52.1c-4.3-2.5-10-2.8-14.8-1.4-.6-5.2-4-9.7-8-12.9l-1.6-1.3-1.4 1.6c-2.7 3.1-3.5 8.3-3.1 12.3.3 2.9 1.2 5.9 3 8.3-1.4.8-2.9 1.9-4.3 2.4-2.8 1-5.9 2-8.9 2H79V49H66V24H51v12H26v13H13v14H1.8l-.2 1.5c-.5 6.4.3 12.6 3 18.5l1.1 2.2.1.2c7.9 13.4 21.7 19 36.8 19 29.2 0 53.3-13.1 64.3-40.6 7.4.4 15-1.8 18.6-8.9l.9-1.8-1.6-1zM28 39h10v11H28V39zm13.1 44.2c0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1 1.7.1 3.1 1.4 3.1 3.1zM28 52h10v11H28V52zm-13 0h11v11H15V52zm27.7 50.2c-15.8-.1-24.3-5.4-31.3-12.4 2.1.1 4.1.2 5.9.2 1.6 0 3.2 0 4.7-.1 3.9-.2 7.3-.7 10.1-1.5 2.3 5.3 6.5 10.2 14 13.8h-3.4zM51 63H40V52h11v11zm0-13H40V39h11v11zm13 13H53V52h11v11zm0-13H53V39h11v11zm0-13H53V26h11v11zm13 26H66V52h11v11zM38.8 81.2c-.2-.1-.5-.2-.8-.2-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2s2.2-1 2.2-2.2c0-.3-.1-.6-.2-.8-.2.3-.4.5-.8.5-.5 0-.9-.4-.9-.9.1-.4.3-.7.5-.8z"/></svg> Docker</span>
+                    <span><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M9.5 2L12 7.5 14.5 2h2.1L12 11 7.4 2zm-5 10L7 17.5 9.5 12h2.1L7 21 2.4 12zm11 0L18 17.5 20.5 12h2.1L18 21 13.4 12z"/></svg> Claude</span>
+                </div>
 
-                    <i class="fa fa-file"></i>
-                    Resume
-                </button>
-                <div class="dropdown-menu social-button" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item social-button" 
-                        href="resume"
-                        target="_blank"
-			id="embedded-resume">
-                        Embedded
+                <div class="hero-highlights">
+                    <div class="highlight">
+                        <span class="highlight-value">6+</span>
+                        <span class="highlight-label">Years in Financial Tech</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-value">MEng</span>
+                        <span class="highlight-label">UCL &middot; First Class Honors</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-value">$80MM+</span>
+                        <span class="highlight-label">Platform Spend Managed</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-value">15+ TB</span>
+                        <span class="highlight-label">Data Processed Daily</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-value">$1MM+</span>
+                        <span class="highlight-label">Annual Savings Delivered</span>
+                    </div>
+                </div>
+
+                <div class="hero-links">
+                    <a href="https://github.com/IlyasI" target="_blank" rel="noopener" class="hero-link">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
                     </a>
-                    <a class="dropdown-item social-button" 
-                        href="resume.pdf" 
-                        download="IlyasIbragimov-Resume.pdf">
-                        Download PDF
+                    <a href="https://www.linkedin.com/in/ilyasi" target="_blank" rel="noopener" class="hero-link">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:ilyas.ibragimov@outlook.com" class="hero-link">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                        Email
+                    </a>
+                    <a href="resume.pdf" download="IlyasIbragimov-Resume.pdf" class="hero-link hero-link--resume">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Resume
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="drag-me-container shadow-lg">
-        <h2 class="text-muted drag-me">
-                (Drag around)
-        </h2>
-    </div>     
+        </header>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
-        crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
-        crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"
-        integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA=" 
-        crossorigin="anonymous">
-    </script>
-    <script>
-	if(PDFObject.supportsPDFs){
-	    console.log("This browser supports embedded pdfs.");
-	    document.getElementById("embedded-resume").style.display = "block";
-	} else {
-	    console.log("This browser des not support embedded pdfs.");
-	    document.getElementById("embedded-resume").style.display = "none";		
-	}
-    </script>
-    <script src="index.js"></script>
-  </body>
+        <section class="section" id="experience">
+            <div class="glass-panel reveal">
+                <h2 class="section-title"><span class="comment-slash">//</span> Experience</h2>
+
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <span class="exp-icon" aria-hidden="true">&Sigma;</span>
+                            <div>
+                                <h3 class="exp-company">Two Sigma</h3>
+                                <span class="exp-role">Senior Software Developer &middot; via Randstad Digital</span>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span>Nov 2022 &mdash; Present</span>
+                            <span>New York, NY</span>
+                        </div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Sole backend engineer on a firm-wide cost transparency platform: Python, dbt, and BigQuery processing 15+ TB daily across 8+ data sources and $80MM+ in annual spend.</li>
+                        <li>Led migration from Apptio to Python/dbt/BigQuery, delivering $1MM+ in annual savings and 65% faster processing. Co-authored the firm's dbt best practices guide and drove adoption across multiple teams.</li>
+                        <li>Built LLM-powered tools using Claude and Vertex AI: department reorganization detection, automated incident response with AI root-cause analysis, and a PowerPoint generation framework for Claude Code.</li>
+                        <li>Decomposed an inherited legacy monolith into 5 loosely coupled pipelines with dedicated CI/CD, automated testing, and schema drift auto-recovery.</li>
+                        <li>Built a firm-wide metrics platform ingesting hundreds of KPIs from multiple teams for executive dashboards and team-level tracking.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <span class="exp-icon" aria-hidden="true">B</span>
+                            <div>
+                                <h3 class="exp-company">Blueshift Asset Management</h3>
+                                <span class="exp-role">Software Developer</span>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span>Jan 2020 &mdash; Nov 2022</span>
+                            <span>Red Bank, NJ</span>
+                        </div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Built a real-time portfolio monitoring platform with terminal-based GUI, automated investor reporting, and historical performance tracking. Reduced analysis time by 65% and supported $500M+ in managed assets.</li>
+                        <li>Optimized the fund's proprietary C++ trading platform, reducing storage by tens of terabytes and production server load by 40%.</li>
+                        <li>Integrated with multiple equity and crypto exchanges and built Python/Selenium data scrapers feeding alternative data research: social media signals, transcribed investor calls, and market sentiment analysis.</li>
+                        <li>Designed a real-time compliance monitoring system automatically flagging banned tickers and improper trade amounts before execution, preventing regulatory violations.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <span class="exp-icon" aria-hidden="true">F</span>
+                            <div>
+                                <h3 class="exp-company">Fidessa</h3>
+                                <span class="exp-role">Platform Development Intern</span>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span>Jul 2018 &mdash; Sep 2018</span>
+                            <span>Woking, UK</span>
+                        </div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Built a secure file transmission platform in Java and JavaScript that eliminated recurring data breaches affecting 200+ clients, replacing vulnerable manual processes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2 class="section-title reveal"><span class="comment-slash">//</span> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal" data-tilt>
+                    <h3 class="project-name"><a href="https://github.com/IlyasI/IlyasI.github.io" target="_blank" rel="noopener" style="color:inherit">ilyasi.com</a></h3>
+                    <p class="project-context">Personal Portfolio &middot; 2026</p>
+                    <p class="project-desc">Portfolio site with canvas particle simulation, interactive terminal emulator, theme engine, and automated Playwright tests. You're looking at it.</p>
+                    <div class="project-tech">
+                        <span>Vanilla JS</span><span>Canvas API</span><span>Playwright</span><span>CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-tilt>
+                    <h3 class="project-name">Network Packet Routing with Deep RL</h3>
+                    <p class="project-context">MEng Thesis &middot; UCL &middot; First Class Honors &middot; 2019</p>
+                    <p class="project-desc">Developed deep reinforcement learning models for optimal packet routing in software-defined networks using Python, OpenAI Gym, and TensorFlow.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>TensorFlow</span><span>OpenAI Gym</span><span>Deep RL</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-tilt>
+                    <h3 class="project-name">Deep Learning for Cryptocurrency Trading</h3>
+                    <p class="project-context">BEng Thesis &middot; UCL &middot; First Class Honors &middot; 2018</p>
+                    <p class="project-desc">Built and refined LSTM networks for cryptocurrency return prediction using Python/Keras with extensive feature engineering and data mining.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Keras</span><span>LSTMs</span><span>Data Mining</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="glass-panel reveal">
+                <h2 class="section-title"><span class="comment-slash">//</span> Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Languages</h3>
+                        <div class="skill-tags">
+                            <span>Python</span><span>SQL</span><span>C++</span><span>Bash</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> Data &amp; Analytics</h3>
+                        <div class="skill-tags">
+                            <span>dbt</span><span>BigQuery</span><span>PostgreSQL</span><span>Dimensional Modeling</span><span>ELT Pipelines</span>
+                        </div>
+                    </div>
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg> Cloud &amp; Infra</h3>
+                        <div class="skill-tags">
+                            <span>GCP</span><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> AI / LLM</h3>
+                        <div class="skill-tags">
+                            <span>Claude Code</span><span>Claude API</span><span>MCP Servers</span><span>Agentic Workflows</span><span>Test-Driven LLM Dev</span>
+                        </div>
+                    </div>
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> Tools &amp; Platforms</h3>
+                        <div class="skill-tags">
+                            <span>Git</span><span>GitHub</span><span>Datadog</span><span>Jira</span><span>Slack</span><span>REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-cat">
+                        <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg> Frameworks</h3>
+                        <div class="skill-tags">
+                            <span>Flask</span><span>Django</span><span>Playwright</span><span>Selenium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="glass-panel reveal">
+                <h2 class="section-title"><span class="comment-slash">//</span> Education</h2>
+                <div class="edu-entry">
+                    <div class="edu-header">
+                        <h3>University College London (UCL)</h3>
+                        <span class="edu-year">2019</span>
+                    </div>
+                    <p class="edu-detail">Master of Engineering (Electronic &amp; Electrical), First Class Honors (4.0 GPA Equivalent)</p>
+                </div>
+                <div class="edu-entry">
+                    <div class="edu-header">
+                        <h3>Baruch College MFE Program</h3>
+                        <span class="edu-year">2020</span>
+                    </div>
+                    <p class="edu-detail">C++ Programming for Financial Engineering Certificate, Distinction</p>
+                </div>
+                <div class="edu-entry">
+                    <div class="edu-header">
+                        <h3>Brooklyn Technical High School</h3>
+                        <span class="edu-year">2015</span>
+                    </div>
+                    <p class="edu-detail">Mathematics Major &middot; Math Team &middot; 4.0 GPA</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://github.com/IlyasI" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/ilyasi" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:ilyas.ibragimov@outlook.com">ilyas.ibragimov@outlook.com</a>
+            </div>
+            <p class="footer-note">Vanilla JS &middot; <a href="https://github.com/IlyasI/IlyasI.github.io" target="_blank" rel="noopener">view source</a></p>
+            <p class="footer-copyright">&copy; 2026 Ilyas Ibragimov</p>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
 </html>
