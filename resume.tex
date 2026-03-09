@@ -8,6 +8,10 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+% Conditional phone number: compile with \def\includephone{1} to include
+\newif\ifincludephone
+\ifdefined\includephone \includephonetrue \fi
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -19,6 +23,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{cmap}           % Embed CMap tables for PDF text extraction
+\usepackage[T1]{fontenc}    % 8-bit font encoding (proper dashes, accents, ligatures)
 \input{glyphtounicode}
 
 
@@ -39,7 +45,15 @@
 \definecolor{dividerline}{RGB}{210, 210, 210}
 
 % Hyperlink styling
-\hypersetup{colorlinks=true, urlcolor=sectionblue, linkcolor=sectionblue}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=sectionblue,
+  linkcolor=sectionblue,
+  pdftitle={Ilyas Ibragimov - Senior Software Developer},
+  pdfauthor={Ilyas Ibragimov},
+  pdfsubject={Resume},
+  pdfkeywords={Software Engineer, Python, BigQuery, dbt, SQL, C++, LLM, Two Sigma, Data Engineering, GCP}
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -116,11 +130,11 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{\textbullet}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}\setlength{\itemsep}{1pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength{\itemsep}{0pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -132,10 +146,11 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\huge \scshape \color{sectionblue} ILYAS IBRAGIMOV} \\ \vspace{-1pt}
-    \small New York, NY $|$
-    \href{mailto:ilyas.ibragimov@outlook.com}{ilyas.ibragimov@outlook.com} $|$
+    \small New York, NY \textbar{}
+    \ifincludephone 929-529-4148 \textbar{} \fi
+    \href{mailto:ilyas.ibragimov@outlook.com}{ilyas.ibragimov@outlook.com} \textbar{}
     \href{https://www.linkedin.com/in/ilyasi/}{linkedin.com/in/ilyasi}
-    $|$
+    \textbar{}
     \href{https://ilyasi.com}{ilyasi.com}
 \end{center}
 
@@ -156,14 +171,12 @@
       {Two Sigma (via Randstad Digital)}{New York, NY}
       \resumeItemListStart
         \resumeItem{Built and maintained the ELT pipeline for a firm-wide cost transparency platform over 3 years with Python, dbt, and BigQuery: 8+ disparate data sources, 15+ TB of usage data daily across hundreds of products, \$80MM+ in annual spend. Became sole backend engineer after the lead's departure.}
-        \resumeItem{Built a firm-wide metrics platform in Python, BigQuery, and SQL, ingesting hundreds of KPIs from multiple teams and sources for executive dashboards and team-level tracking.}
-        \resumeItem{Onboarded a new engineer to the team and together decomposed an inherited legacy monolith into 5 loosely coupled pipelines with dedicated CI/CD, automated testing, and programmatic data ingestion.}
         \resumeItem{Drove early adoption of dbt (Data Build Tool) at the firm. Co-authored the internal best practices guide, built quickstart repos, and gave presentations that accelerated usage across multiple teams. Led the migration from Apptio to Python, dbt, and BigQuery, delivering \$1MM+ in annual savings and 65\% faster processing.}
-        \resumeItem{Created an LLM-powered department reorganization detection system: a pipeline using Claude and Vertex AI that analyzes employee movement patterns, classifies organizational changes, and applies retroactive cost corrections. Eliminated weeks of manual investigation per reorganization.}
-        \resumeItem{Designed an automated incident response system with GitHub issue creation, Slack alerting, and AI-generated root-cause analysis via Claude Code. Hardened ELT pipelines with schema drift auto-recovery, exponential backoff retries, and safe handling of upstream outages.}
-        \resumeItem{Built a PowerPoint generation framework for Claude Code: fully editable, branded decks with employee photo lookups, auto-generated figures and tables, and Google Workspace uploads. Includes custom skills, prompts, assets, JavaScript rendering scripts, and Playwright layout tests.}
+        \resumeItem{Built a firm-wide metrics platform in Python, BigQuery, and SQL, ingesting hundreds of KPIs from multiple teams and sources for executive dashboards and team-level tracking.}
+        \resumeItem{Decomposed an inherited legacy monolith into 5 loosely coupled pipelines with dedicated CI/CD, automated testing, and schema drift auto-recovery. Designed an automated incident response system with GitHub issue creation, Slack alerting, and AI root-cause analysis.}
+        \resumeItem{Created an LLM-powered department reorganization detection system using Claude and Vertex AI that analyzes employee movement patterns, classifies organizational changes, and applies retroactive cost corrections. Eliminated weeks of manual investigation per reorganization.}
       \resumeItemListEnd
-    \vspace{2pt}
+    \vspace{1pt}
 
     \resumeSubheading
       {Software Developer}{Jan. 2020 -- Nov. 2022}
@@ -174,7 +187,7 @@
         \resumeItem{Integrated with multiple equity and crypto exchanges and built Python/Selenium data scrapers feeding alternative data research: social media signals, transcribed investor calls, and market sentiment analysis.}
         \resumeItem{Designed a real-time compliance monitoring system automatically flagging banned tickers and improper trade amounts before execution, preventing regulatory violations.}
       \resumeItemListEnd
-    \vspace{2pt}
+    \vspace{1pt}
 
     \resumeSubheading
       {Platform Development Intern}{July 2018 -- Sep. 2018}
@@ -184,19 +197,6 @@
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, SQL (BigQuery), C++, Bash, JavaScript} \\
-     \textbf{Data \& Analytics}{: dbt, BigQuery, PostgreSQL, Dimensional Modeling, ELT Pipeline Design} \\
-     \textbf{Cloud \& Infrastructure}{: GCP (BigQuery, GCS), AWS, Docker, GitHub Actions, Linux/Unix} \\
-     \textbf{AI/LLM}{: Claude Code, Claude API, Claude Skills, MCP Servers, Agentic Workflows, Test-Driven LLM Development} \\
-     \textbf{Tools \& Platforms}{: Git, GitHub, Datadog, Jira, Slack, Google Workspace, Excel, REST APIs} \\
-     \textbf{Frameworks \& Testing}{: Flask, Django, Playwright, Selenium}
-    }}
- \end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -211,6 +211,19 @@
       {Brooklyn Technical High School}{Brooklyn, NY}
       {High School Diploma, Mathematics Major, Math Team, 4.0 GPA}{2015}
   \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL (BigQuery), C++, Bash, JavaScript} \\
+     \textbf{Data \& Analytics}{: dbt, BigQuery, PostgreSQL, Dimensional Modeling, ELT Pipeline Design} \\
+     \textbf{Cloud \& Infrastructure}{: GCP (BigQuery, GCS), AWS, Docker, GitHub Actions, Linux/Unix} \\
+     \textbf{AI/LLM}{: Claude Code, Claude API, Claude Skills, MCP Servers, Agentic Workflows, Test-Driven LLM Development} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, Datadog, Jira, Slack, Google Workspace, Excel, REST APIs} \\
+     \textbf{Frameworks \& Testing}{: Flask, Django, Playwright, Selenium}
+    }}
+ \end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}

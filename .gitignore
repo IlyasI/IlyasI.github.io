@@ -1,3 +1,12 @@
 node_modules/
 test-results/
 playwright-report/
+
+# LaTeX artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+resume-full.pdf
