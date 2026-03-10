@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Editor : Ilyas Ibragimov
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Conditional phone number: compile with \def\includephone{1} to include
+\newif\ifincludephone
+\ifdefined\includephone \includephonetrue \fi
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\input{glyphtounicode}
+
+% Custom colors
+\definecolor{sectionblue}{RGB}{30, 50, 80}
+\definecolor{dividerline}{RGB}{210, 210, 210}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=sectionblue,
+  linkcolor=sectionblue,
+  pdftitle={Ilyas Ibragimov - Senior Software Engineer},
+  pdfauthor={Ilyas Ibragimov},
+  pdfsubject={Resume},
+  pdfkeywords={Software Engineer, Python, SQL, AI, LLM, GenAI, Data Engineering, Internal Tools, Two Sigma}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\color{sectionblue}
+}{}{0em}{}[\color{sectionblue}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      {\small\color{sectionblue}\textbf{#3}} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingLarger}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      \textit{\small #3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEduHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & {\small #2} \\
+      \hspace{0.15in}\textit{\small #3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \hspace{0.15in}\textit{\small#1} & {\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{\textbullet}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength{\itemsep}{0pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge \scshape \color{sectionblue} ILYAS IBRAGIMOV} \\ \vspace{-1pt}
+    \small New York, NY \textbar{}
+    \ifincludephone 929-529-4148 \textbar{} \fi
+    \href{mailto:ilyas.ibragimov@outlook.com}{ilyas.ibragimov@outlook.com} \textbar{}
+    \href{https://www.linkedin.com/in/ilyasi/}{linkedin.com/in/ilyasi}
+    \textbar{}
+    \href{https://ilyasi.com}{ilyasi.com}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Software engineer with 6+ years building data platforms, internal tools, and AI-powered systems at quantitative hedge funds. At Two Sigma, built and deployed multiple GenAI tools using Claude and Vertex AI while owning end-to-end data infrastructure ingesting 15+ TB daily. Comfortable across the full stack: backend engineering, automated data pipelines, and LLM integration. Track record of translating complex requirements from non-technical stakeholders into reliable, production-grade systems.
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Software Developer}{Nov. 2022 -- Present}
+      {Two Sigma (via Randstad Digital)}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Built GenAI-powered tools using Claude and Vertex AI: an automated incident response pipeline with Slack alerting and root-cause analysis, and an org-change detector that classifies department reorganizations and applies retroactive cost corrections, eliminating weeks of manual investigation.}
+        \resumeItem{Led end-to-end development of a firm-wide cost transparency platform tracking \$80MM+ in annual spend. Maintained the ELT backend in Python, dbt, and BigQuery over 3 years, ingesting 15+ TB daily from 8+ data sources across hundreds of products.}
+        \resumeItem{Built a firm-wide metrics platform ingesting hundreds of KPIs from multiple teams for executive dashboards and team-level tracking. Regularly partnered with non-technical stakeholders to translate reporting needs into data models and automated pipelines.}
+        \resumeItem{Decomposed a legacy monolith into 5 loosely coupled pipelines with CI/CD, automated testing, and schema drift auto-recovery. Managed team transitions including onboarding a replacement engineer.}
+        \resumeItem{Led migration from a third-party vendor to an in-house Python, dbt, and BigQuery stack, delivering \$1MM+ in annual savings and 65\% faster processing.}
+      \resumeItemListEnd
+    \vspace{1pt}
+
+    \resumeSubheading
+      {Software Developer}{Jan. 2020 -- Nov. 2022}
+      {Blueshift Asset Management}{Red Bank, NJ}
+      \resumeItemListStart
+        \resumeItem{Built Python/Selenium scrapers feeding a proprietary alternative data research pipeline: social media signals, transcribed earnings calls, and market sentiment analysis — automating data collection that previously required manual effort.}
+        \resumeItem{Designed a real-time compliance monitoring system flagging banned tickers and improper trade amounts before execution, preventing regulatory violations in a highly regulated environment.}
+        \resumeItem{Built a real-time P\&L and portfolio monitoring platform from scratch, reducing analyst review time by 65\% and supporting \$500M+ in managed assets.}
+        \resumeItem{Optimized the fund's C++ trading platform, reducing storage by tens of terabytes and production server load by 40\%.}
+      \resumeItemListEnd
+    \vspace{1pt}
+
+    \resumeSubheading
+      {Platform Development Intern}{July 2018 -- Sep. 2018}
+      {Fidessa}{Woking, UK}
+      \resumeItemListStart
+        \resumeItem{Built a secure file transmission platform in Java and JavaScript that eliminated recurring data breaches affecting 200+ clients, replacing vulnerable manual processes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEduHeading
+      {University College London (UCL)}{London, UK}
+      {Master of Engineering, Electronic \& Electrical Engineering}{2018 -- 2019}
+    \resumeSubSubheading
+      {Bachelor of Engineering, Electronic \& Electrical Engineering}{2015 -- 2018}
+    \resumeSubSubheading
+      {First Class Honors \textperiodcentered{} 4.0 GPA Equivalent}{}
+    \vspace{-5pt}
+    \resumeEduHeading
+      {Baruch College MFE Program}{New York, NY (Remote)}
+      {C++ Programming for Financial Engineering Certificate, Distinction}{2020}
+    \resumeEduHeading
+      {Brooklyn Technical High School}{Brooklyn, NY}
+      {High School Diploma, Mathematics Major, Math Team, 4.0 GPA}{2011 -- 2015}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{AI/GenAI}{: Claude Code, Claude API, Vertex AI, MCP Servers, Agentic Workflows, AI Pipelines, Prompt Engineering} \\
+     \textbf{Languages}{: Python, SQL (BigQuery), C++, Bash, JavaScript} \\
+     \textbf{Data \& Analytics}{: dbt, BigQuery, PostgreSQL, ELT Pipeline Design, Dimensional Modeling, Automated Pipelines} \\
+     \textbf{Cloud \& Infrastructure}{: GCP (BigQuery, GCS), AWS, Docker, GitHub Actions, CI/CD, Linux/Unix} \\
+     \textbf{Tools \& Frameworks}{: Git, GitHub, Flask, Django, Datadog, Jira, Selenium, Playwright}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeSubheadingLarger
+        {Network Packet Routing with Deep Reinforcement Learning}{MEng Thesis, First Class Honors}
+        {University College London (UCL)}{2019}
+        \resumeItemListStart
+          \resumeItem{Developed deep reinforcement learning models for optimal packet routing in software-defined networks using Python, OpenAI Gym, and TensorFlow.}
+        \resumeItemListEnd
+      \resumeSubheadingLarger
+        {Deep Learning Applications in Cryptocurrency Trading}{BEng Thesis, First Class Honors}
+        {University College London (UCL)}{2018}
+        \resumeItemListStart
+          \resumeItem{Built and refined LSTM networks for cryptocurrency return prediction using Python/Keras with extensive feature engineering and data mining.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
