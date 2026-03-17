@@ -6,6 +6,8 @@
 % License : MIT
 %------------------------
 
+% Pin PDF version to 1.4 for maximum ATS compatibility (must be before \documentclass)
+\pdfminorversion=4
 \documentclass[letterpaper,11pt]{article}
 
 % Conditional phone number: compile with \def\includephone{1} to include
@@ -26,7 +28,6 @@
 \usepackage{cmap}           % Embed CMap tables for PDF text extraction
 \usepackage[T1]{fontenc}    % 8-bit font encoding (proper dashes, accents, ligatures)
 \input{glyphtounicode}
-
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -52,7 +53,7 @@
   pdftitle={Ilyas Ibragimov - Senior Software Engineer},
   pdfauthor={Ilyas Ibragimov},
   pdfsubject={Resume},
-  pdfkeywords={Software Engineer, Python, Java, AWS, Docker, Security, Identity, Privacy, Two Sigma, Blueshift}
+  pdfkeywords={Software Engineer, Python, Java, AWS, Docker, PostgreSQL, Security, CI/CD, Full Stack, Two Sigma}
 }
 
 \pagestyle{fancy}
@@ -158,7 +159,7 @@
 \section{Summary}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     Software engineer with 6+ years building secure, privacy-aware backend systems at quantitative hedge funds. At Two Sigma, led a firm-wide platform modeling access and cost ownership across thousands of organizational units. At Blueshift, designed real-time compliance systems enforcing access rules before trade execution. Earlier built a secure file transmission platform in Java at Fidessa, eliminating data breaches for 200+ clients.
+     Software engineer with 6+ years building secure, production-grade systems at quantitative hedge funds. At Two Sigma, owned the backend for a firm-wide platform ingesting 15+ TB daily across hundreds of products, decomposed a legacy monolith into distributed services with CI/CD and automated testing, and built multiple AI-powered tools in production. Previously built real-time compliance and monitoring systems handling sensitive financial data for \$500M+ in assets. Python, Java, AWS, shipping fast.
     }}
  \end{itemize}
 
@@ -171,10 +172,10 @@
       {Two Sigma (via Randstad Digital)}{New York, NY}
       \resumeItemListStart
         \resumeItem{Stepped up to lead the backend effort on a firm-wide cost transparency platform tracking \$80MM+ in annual spend. Developed and maintained the ELT backend over 3 years in Python, dbt, and BigQuery, ingesting 15+ TB daily from 8+ data sources across hundreds of products.}
-        \resumeItem{Managed team transitions (offboarded an engineer, trained his replacement) and together decomposed a legacy monolith into 5 loosely coupled pipelines with CI/CD, automated testing, and schema drift auto-recovery.}
-        \resumeItem{Built a firm-wide metrics platform in Python, BigQuery, and SQL, ingesting hundreds of KPIs from multiple teams and sources for executive dashboards and team-level tracking.}
-        \resumeItem{Led migration from a legacy vendor to an in-house Python and SQL stack, delivering \$1MM+ in annual savings and 65\% faster processing.}
-        \resumeItem{Built GenAI-powered systems using Claude and Vertex AI: an automated incident response pipeline with Slack alerting and root-cause analysis, and a department reorganization detector that classifies org changes and applies retroactive corrections, eliminating weeks of manual investigation.}
+        \resumeItem{Drove early adoption of dbt (Data Build Tool) at the firm. Co-authored the internal best practices guide, built quickstart repos, and gave presentations that accelerated usage across multiple teams. Led the migration from Apptio to Python, dbt, and BigQuery, delivering \$1MM+ in annual savings and 65\% faster processing.}
+        \resumeItem{Managed team transitions (offboarded an engineer, onboarded his replacement), then partnered with the new engineer to decompose a legacy monolith into 5 loosely coupled pipelines with CI/CD, automated testing, and schema drift auto-recovery.}
+        \resumeItem{Built a firm-wide metrics platform in Python, BigQuery, and SQL, ingesting hundreds of KPIs from multiple teams and sources for executive dashboards (Backstage) and team-level tracking.}
+        \resumeItem{Built GenAI-powered systems using Claude and Vertex AI: an automated incident response pipeline with Slack alerting and root-cause analysis, and a department reorganization detector that classifies org changes and applies retroactive cost corrections, eliminating weeks of manual investigation.}
       \resumeItemListEnd
     \vspace{1pt}
 
@@ -182,10 +183,10 @@
       {Software Developer}{Jan. 2020 -- Nov. 2022}
       {Blueshift Asset Management}{Red Bank, NJ}
       \resumeItemListStart
-        \resumeItem{Built a real-time P\&L and portfolio monitoring platform from scratch, with terminal-based GUI, automated investor reporting, and historical performance tracking. Reduced analysis time by 65\% and supported \$500M+ in managed assets.}
-        \resumeItem{Designed a real-time compliance monitoring system automatically flagging banned tickers and improper trade amounts before execution, preventing regulatory violations and enforcing access rules at the point of action.}
-        \resumeItem{Integrated with multiple equity and crypto exchanges and built Python/Selenium data scrapers feeding alternative data research: social media signals, transcribed investor calls, and market sentiment analysis.}
+        \resumeItem{Built a real-time portfolio monitoring platform with terminal-based GUI, automated investor reporting, and historical performance tracking. Reduced analysis time by 65\% and supported \$500M+ in managed assets.}
         \resumeItem{Optimized the fund's proprietary C++ trading platform, reducing storage by tens of terabytes and production server load by 40\%.}
+        \resumeItem{Integrated with multiple equity and crypto exchanges and built Python/Selenium data scrapers feeding alternative data research: social media signals, transcribed investor calls, and market sentiment analysis.}
+        \resumeItem{Designed a real-time compliance monitoring system automatically flagging banned tickers and improper trade amounts before execution, preventing regulatory violations.}
       \resumeItemListEnd
     \vspace{1pt}
 
@@ -193,7 +194,7 @@
       {Platform Development Intern}{July 2018 -- Sep. 2018}
       {Fidessa}{Woking, UK}
       \resumeItemListStart
-        \resumeItem{Built a secure file transmission platform in Java and JavaScript that eliminated recurring data breaches affecting 200+ clients, replacing vulnerable manual processes with a hardened, auditable system.}
+        \resumeItem{Built a secure file transmission platform in Java and JavaScript that eliminated recurring data breaches affecting 200+ clients, replacing vulnerable manual processes.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -221,11 +222,11 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Java, SQL (BigQuery), C++, JavaScript, Bash} \\
-     \textbf{Cloud \& Infrastructure}{: GCP (BigQuery, GCS), AWS, Docker, Argo, GitHub Actions, CI/CD, Linux/Unix} \\
-     \textbf{Data \& Architecture}{: dbt, BigQuery, PostgreSQL, ELT Pipeline Design, Distributed Systems, Dimensional Modeling} \\
-     \textbf{AI/GenAI}{: Claude API, Vertex AI, MCP Servers, AI Pipelines, Agentic Workflows} \\
-     \textbf{Tools \& Frameworks}{: Git, GitHub, Django, Flask, Playwright, Selenium, Datadog, Jira}
+     \textbf{Languages}{: Python, Java, SQL (BigQuery, PostgreSQL), JavaScript, C++, Bash} \\
+     \textbf{Cloud \& DevOps}{: Google Cloud Platform (GCP, BigQuery, GCS), AWS, Docker, GitHub Actions, CI/CD, Linux/Unix} \\
+     \textbf{Data \& Infrastructure}{: dbt, BigQuery, PostgreSQL, ELT Pipeline Design, Dimensional Modeling} \\
+     \textbf{AI/GenAI}{: Claude Code, Claude API, Vertex AI, MCP Servers, AI Pipelines, Agentic Workflows} \\
+     \textbf{Tools \& Frameworks}{: Git, GitHub, Backstage, Django, Flask, React, Playwright, Selenium, Datadog, Slack}
     }}
  \end{itemize}
 
