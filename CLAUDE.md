@@ -26,3 +26,39 @@ Every cover letter must be verified for ATS parsability before delivery:
 3. All checks must pass (filename, structure, word count 200-400, encoding, fonts, PDF version, page count = 1)
 4. Cover letter LaTeX files must include `\pdfminorversion=4`, `cmap`, `[T1]{fontenc}`, `glyphtounicode`, and `\pdfgentounicode=1`. See cover-clear.tex as the reference template.
 5. Shortcut: `make build-verify-cover-clear` builds and verifies in one step.
+
+### Testing
+Run `make test-ats` to execute the full ATS verification test suite (34 tests).
+
+## Workflow: Creating a Tailored Resume
+1. Copy `resume-clear.tex` to `resume-<company>.tex`
+2. Edit the copy for the target role (reorder bullets, adjust skills, update summary)
+3. Add a `resume-<company>` target to the Makefile
+4. Add `resume-<company>.tex`, `resume-<company>.pdf`, and `Ilyas_Ibragimov_Resume_<Company>.pdf` to `.gitignore`
+5. Build: `make resume-<company>`
+6. Verify: `bash scripts/verify-resume-ats.sh Ilyas_Ibragimov_Resume_<Company>.pdf resume-<company>.tex`
+7. All checks must pass before sending
+
+## Workflow: Creating a Cover Letter
+1. Copy `cover-clear.tex` to `cover-<company>.tex`
+2. Edit for the target role (update company name, tailor content, set pdftitle)
+3. Add a `cover-<company>` target to the Makefile
+4. Add `cover-<company>.tex`, `cover-<company>.pdf`, and `Ilyas_Ibragimov_Cover_Letter_<Company>.pdf` to `.gitignore`
+5. Build: `make cover-<company>`
+6. Verify: `bash scripts/verify-cover-letter-ats.sh Ilyas_Ibragimov_Cover_Letter_<Company>.pdf cover-<company>.tex`
+7. All checks must pass before sending
+
+## Make Targets Reference
+| Target | Description |
+|--------|-------------|
+| `make resume-clear` | Build CLEAR resume PDF |
+| `make cover-clear` | Build CLEAR cover letter PDF |
+| `make verify` | Verify base resume |
+| `make verify-clear` | Verify CLEAR resume |
+| `make verify-cover-clear` | Verify CLEAR cover letter |
+| `make verify-ats PDF=... TEX=...` | Verify any resume |
+| `make verify-cover PDF=... TEX=...` | Verify any cover letter |
+| `make build-verify-clear` | Build + verify CLEAR resume |
+| `make build-verify-cover-clear` | Build + verify CLEAR cover letter |
+| `make test-ats` | Run ATS verification test suite |
+| `make clean` | Remove LaTeX build artifacts |
