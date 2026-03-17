@@ -1,4 +1,4 @@
-.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean
+.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-setup
 
 resume:
 	pdflatex resume.tex
@@ -150,11 +150,23 @@ resume-deloitte:
 cover-deloitte:
 	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_Deloitte cover-deloitte.tex
 
+resume-unify:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_Unify "\def\includephone{1}\input{resume-unify.tex}"
+
 resume-rationaldynamics:
 	pdflatex -jobname=Ilyas_Ibragimov_Resume_RationalDynamics "\def\includephone{1}\input{resume-rationaldynamics.tex}"
 
+cover-rationaldynamics:
+	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_RationalDynamics cover-rationaldynamics.tex
+
 cover-projectcanary:
 	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_ProjectCanary cover-projectcanary.tex
+
+resume-unity:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_Unity "\def\includephone{1}\input{resume-unity.tex}"
+
+cover-unity:
+	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_Unity cover-unity.tex
 
 verify:
 	bash scripts/verify-resume-ats.sh resume.pdf resume.tex
@@ -168,6 +180,33 @@ verify-ats:
 
 # Build and verify CLEAR resume in one step
 build-verify-clear: resume-clear verify-clear
+
+# Cover letter verification
+cover-clear:
+	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_CLEAR cover-clear.tex
+
+verify-cover-clear:
+	bash scripts/verify-cover-letter-ats.sh Ilyas_Ibragimov_Cover_Letter_CLEAR.pdf cover-clear.tex
+
+# Verify any cover letter: make verify-cover PDF=Ilyas_Ibragimov_Cover_Letter_Chalk.pdf TEX=cover-chalk.tex
+verify-cover:
+	bash scripts/verify-cover-letter-ats.sh $(PDF) $(TEX)
+
+# Build and verify CLEAR cover letter in one step
+build-verify-cover-clear: cover-clear verify-cover-clear
+
+# --- Job Search ---
+jobs-setup:
+	pip3 install -r jobs/requirements.txt
+
+jobs:
+	python3 jobs/search.py
+
+jobs-fresh:
+	python3 jobs/search.py --max-age 24
+
+jobs-json:
+	python3 jobs/search.py --json
 
 clean:
 	rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz

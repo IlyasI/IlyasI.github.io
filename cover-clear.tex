@@ -1,0 +1,41 @@
+% Pin PDF version to 1.4 for maximum ATS compatibility (must be before \documentclass)
+\pdfminorversion=4
+\documentclass[11pt]{letter}
+\usepackage[empty]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{cmap}
+\input{glyphtounicode}
+\usepackage{hyperref}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdftitle={Ilyas Ibragimov - Cover Letter - CLEAR},
+  pdfauthor={Ilyas Ibragimov},
+}
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\begin{document}
+\begin{letter}{}
+\opening{Hi,}
+
+I'm very interested in the Senior Software Engineer role at CLEAR. I've spent the last 6+ years building backend systems at quantitative hedge funds where security and data accuracy aren't optional, and I think that experience maps well to what you're building.
+
+At Two Sigma I helped build a firm-wide cost transparency platform from the ground up over 3 years in Python and BigQuery, ingesting 15+ TB daily from 8+ data sources. After several engineers left I stepped up to lead the backend, broke a monolith into separate services with CI/CD and automated testing, and kept the system running and evolving. I also built a few AI-powered tools from scratch that are in production today. Before that, at a small 20-person hedge fund, I built real-time portfolio monitoring, compliance systems, and exchange integrations all from nothing, handling sensitive financial data for \$500M+ in assets.
+
+I've been following CLEAR for a while and I really like the direction you're heading, going beyond just ID checks into a full identity platform. Building a platform that connects dozens of attributes while keeping privacy and security at the center is exactly the kind of problem I want to work on. My whole career has been in environments where getting it wrong has real consequences, and I really value that same rigor in what CLEAR is doing.
+
+I'm based in NYC and happy to be in office.
+
+Thank you for your consideration,
+
+Ilyas
+\end{letter}
+\end{document}

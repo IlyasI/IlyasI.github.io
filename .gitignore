@@ -160,3 +160,19 @@ Ilyas_Ibragimov_Cover_Letter_Deloitte.pdf
 resume-rationaldynamics.tex
 resume-rationaldynamics.pdf
 Ilyas_Ibragimov_Resume_RationalDynamics.pdf
+resume-unify.tex
+resume-unify.pdf
+Ilyas_Ibragimov_Resume_Unify.pdf
+cover-rationaldynamics.tex
+cover-rationaldynamics.pdf
+Ilyas_Ibragimov_Cover_Letter_RationalDynamics.pdf
+resume-unity.tex
+resume-unity.pdf
+Ilyas_Ibragimov_Resume_Unity.pdf
+cover-unity.tex
+cover-unity.pdf
+Ilyas_Ibragimov_Cover_Letter_Unity.pdf
+
+# Job search
+jobs/.seen_jobs.json
+jobs/.env

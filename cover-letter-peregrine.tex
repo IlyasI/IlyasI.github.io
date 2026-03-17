@@ -1,8 +1,12 @@
+% Pin PDF version to 1.4 for maximum ATS compatibility (must be before \documentclass)
+\pdfminorversion=4
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage[empty]{fullpage}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
+\usepackage{cmap}
+\input{glyphtounicode}
 \usepackage[english]{babel}
 
 \hypersetup{
@@ -16,6 +20,9 @@
 \addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-.75in}
 \addtolength{\textheight}{1.2in}
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
 
 \begin{document}
 
