@@ -1,4 +1,4 @@
-.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-setup
+.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-setup tracker tracker-list tracker-add tracker-update tracker-followups tracker-stats
 
 resume:
 	pdflatex resume.tex
@@ -195,6 +195,10 @@ verify-cover:
 # Build and verify CLEAR cover letter in one step
 build-verify-cover-clear: cover-clear verify-cover-clear
 
+# Run ATS verification test suite
+test-ats:
+	bash scripts/test-ats-checks.sh
+
 # --- Job Search ---
 jobs-setup:
 	pip3 install -r jobs/requirements.txt
@@ -207,6 +211,34 @@ jobs-fresh:
 
 jobs-json:
 	python3 jobs/search.py --json
+
+jobs-test:
+	python3 -m pytest jobs/test_search.py -v
+
+jobs-install:
+	bash jobs/install.sh
+
+jobs-uninstall:
+	bash jobs/uninstall.sh
+
+# --- Application Tracker ---
+tracker:
+	python3 scripts/tracker.py
+
+tracker-list:
+	python3 scripts/tracker.py list
+
+tracker-add:
+	python3 scripts/tracker.py add "$(COMPANY)" "$(ROLE)" "$(URL)"
+
+tracker-update:
+	python3 scripts/tracker.py update "$(COMPANY)" $(STATUS)
+
+tracker-followups:
+	python3 scripts/tracker.py followups
+
+tracker-stats:
+	python3 scripts/tracker.py stats
 
 clean:
 	rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz
