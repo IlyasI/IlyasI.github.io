@@ -1,4 +1,4 @@
-.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-site jobs-setup tracker tracker-list tracker-add tracker-update tracker-followups tracker-stats apply
+.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-site jobs-serve jobs-setup tracker tracker-list tracker-add tracker-update tracker-followups tracker-stats apply
 resume:
 	pdflatex resume.tex
 
@@ -220,6 +220,9 @@ jobs-json:
 jobs-site:
 	python3 jobs/search.py --json --output jobs/data/results.json
 	@echo "Dashboard ready: open jobs.html"
+
+jobs-serve:
+	python3 jobs/app.py
 
 jobs-test:
 	python3 -m pytest jobs/test_search.py -v
