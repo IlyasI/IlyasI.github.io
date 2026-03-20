@@ -1,4 +1,4 @@
-.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-setup tracker tracker-list tracker-add tracker-update tracker-followups tracker-stats
+.PHONY: resume resume-full resume-harvey resume-hearst resume-peregrine resume-clear resume-breakfast resume-twentyai resume-camber resume-decagon resume-carta resume-chalk resume-brellium resume-etsy resume-plaid resume-distylai verify clean jobs jobs-fresh jobs-json jobs-site jobs-setup tracker tracker-list tracker-add tracker-update tracker-followups tracker-stats apply promote-drafts promote-calendar promote-seo promote-all
 
 resume:
 	pdflatex resume.tex
@@ -168,6 +168,12 @@ resume-unity:
 cover-unity:
 	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_Unity cover-unity.tex
 
+resume-datadog:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_Datadog "\def\includephone{1}\input{resume-datadog.tex}"
+
+cover-datadog:
+	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_Datadog cover-datadog.tex
+
 verify:
 	bash scripts/verify-resume-ats.sh resume.pdf resume.tex
 
@@ -212,6 +218,10 @@ jobs-fresh:
 jobs-json:
 	python3 jobs/search.py --json
 
+jobs-site:
+	python3 jobs/search.py --json --output jobs/data/results.json
+	@echo "Dashboard ready: open jobs.html"
+
 jobs-test:
 	python3 -m pytest jobs/test_search.py -v
 
@@ -239,6 +249,28 @@ tracker-followups:
 
 tracker-stats:
 	python3 scripts/tracker.py stats
+
+# --- Apply to a Job ---
+apply:
+	python3 jobs/apply.py "$(COMPANY)" "$(URL)"
+
+# --- Promotion Tools ---
+promote-drafts:
+	python3 scripts/promote/draft-posts.py --all
+
+promote-drafts-save:
+	python3 scripts/promote/draft-posts.py --all --save
+
+promote-calendar:
+	python3 scripts/promote/content-calendar.py --weeks 4
+
+promote-calendar-save:
+	python3 scripts/promote/content-calendar.py --weeks 4 --save
+
+promote-seo:
+	python3 scripts/promote/seo-audit.py
+
+promote-all: promote-seo promote-drafts promote-calendar
 
 clean:
 	rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz

@@ -172,7 +172,48 @@ Ilyas_Ibragimov_Resume_Unity.pdf
 cover-unity.tex
 cover-unity.pdf
 Ilyas_Ibragimov_Cover_Letter_Unity.pdf
+resume-datadog.tex
+resume-datadog.pdf
+Ilyas_Ibragimov_Resume_Datadog.pdf
+cover-datadog.tex
+cover-datadog.pdf
+Ilyas_Ibragimov_Cover_Letter_Datadog.pdf
 
 # Job search
+jobs/jd-*.txt
 jobs/.seen_jobs.json
 jobs/.env
+jobs/.search.log
+jobs/.jobwatch*.log
+jobs/.jobwatch_state.json
+jobs/data/
+jobs.html
+
+# Job search sensitive files — DO NOT PUBLISH
+tracker.yaml
+scripts/tracker.py
+scripts/outreach.md
+.github/workflows/job-alert.yml
+GITHUB_PROFILE_README.md
+linkedin-profile.md
+breakfast-application.md
+projectcanary-technical-decision.md
+cover-chalk.md
+cover-clear.md
+cover-coreweave.md
+cover-hinge.md
+cover-plaid.md
+cover-posh.md
+cover-clear.tex
+cover-clear.pdf
+Ilyas_Ibragimov_Cover_Letter_CLEAR.pdf
+CREATIVE_IDEAS.md
+DESIGN_CONCEPTS.md
+FINAL_CONCEPT.md
+REDESIGN_PLAN.md
+.DS_Store
+
+# Promotion tools — generated output
+scripts/promote/drafts/
+scripts/promote/calendars/
+scripts/promote/config.yaml
