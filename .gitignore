@@ -212,8 +212,3 @@ DESIGN_CONCEPTS.md
 FINAL_CONCEPT.md
 REDESIGN_PLAN.md
 .DS_Store
-
-# Promotion tools — generated output
-scripts/promote/drafts/
-scripts/promote/calendars/
-scripts/promote/config.yaml
