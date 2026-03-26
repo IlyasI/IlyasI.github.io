@@ -1,0 +1,246 @@
+# Job Search Configuration
+# All sources are 100% free - no API keys needed.
+
+profile:
+  title_queries:
+    - "senior software engineer"
+    - "senior backend engineer"
+    - "senior data engineer"
+    - "senior platform engineer"
+    - "staff software engineer"
+    - "senior software developer"
+
+  skills:
+    strong:
+      - python
+      - bigquery
+      - gcp
+      - dbt
+      - sql
+      - data engineering
+      - etl
+      - elt
+      - data pipelines
+      - bash
+      - git
+    moderate:
+      - c++
+      - aws
+      - docker
+      - flask
+      - django
+      - datadog
+      - playwright
+      - selenium
+    familiar:
+      - javascript
+      - java
+      - postgresql
+      - react
+      - node.js
+
+  location: "New York, NY"
+  remote_ok: true
+  min_salary: 170000
+  max_salary: 350000
+  years_experience: 6
+
+search:
+  max_age_hours: 168
+  min_score: 20
+  max_results: 500
+
+  exclude_companies:
+    - "Two Sigma"
+    - "Two Sigma Investments"
+    - "Two Sigma Securities"
+
+  exclude_keywords:
+    - "principal"
+    - "director"
+    - "vp "
+    - "vice president"
+    - "manager"
+    - "junior"
+    - "intern"
+    - "entry level"
+
+  # Only show jobs matching these location patterns (case-insensitive substring match)
+  accepted_locations:
+    - "new york"
+    - "nyc"
+    - ", ny"
+    - "united states"
+    - "usa"
+    - "remote - us"
+    - "remote - united states"
+    - "remote (u.s"
+    - "remote, us"
+    - "remote - usa"
+    - "anywhere"
+    - "worldwide"
+    - "us "
+    - "u.s."
+    - "san francisco"
+    - "california"
+    - ", ca"
+    - "seattle"
+    - ", wa"
+    - "boston"
+    - "chicago"
+    - "austin"
+    - "denver"
+    - "los angeles"
+
+  # Reject locations containing these country names (catches "Portugal, Remote" etc.)
+  rejected_countries:
+    - "france"
+    - "germany"
+    - "spain"
+    - "portugal"
+    - "italy"
+    - "switzerland"
+    - "ireland"
+    - "india"
+    - "brazil"
+    - "canada"
+    - "uk"
+    - "united kingdom"
+    - "japan"
+    - "korea"
+    - "singapore"
+    - "australia"
+    - "netherlands"
+    - "sweden"
+    - "poland"
+    - "czech"
+    - "romania"
+    - "turkey"
+    - "israel"
+
+  boost_keywords:
+    - "genai"
+    - "llm"
+    - "ai"
+    - "data platform"
+    - "cost"
+    - "fintech"
+    - "financial"
+    - "hedge fund"
+    - "quantitative"
+
+# --- Sources (all free, no API keys) ---
+
+sources:
+  linkedin:
+    enabled: true
+
+  indeed:
+    enabled: true
+
+  greenhouse:
+    enabled: true
+    # Verified working Greenhouse board slugs (as of March 2026)
+    companies:
+      # Fintech / Finance
+      - stripe          # 528 jobs
+      - brex            # 251
+      - robinhood       # 143
+      - coinbase        # 218
+      - affirm          # 161
+      - chime           # 60
+      - sofi            # 204
+      # Data / AI / ML
+      - databricks      # 796
+      - anthropic       # 449
+      - scaleai         # 168
+      - andurilindustries  # 1671
+      # Big Tech
+      - discord         # 83
+      - reddit          # 143
+      - figma           # 160
+      - vercel          # 77
+      - cloudflare      # 563
+      - datadog         # 443
+      - elastic         # 227
+      - lyft            # 169
+      - dropbox         # 124
+      - twilio          # 136
+      - doordashusa     # 501
+      - verkada         # 314
+      - airtable        # 53
+      - webflow         # 59
+      - faire           # 73
+      - mongodb         # 403
+      # NYC
+      - peloton         # 44
+      - squarespace     # 46
+      - justworks       # 104
+      - cockroachlabs   # 36
+      # Fintech / Finance (new)
+      - marqeta         # 24
+      - adyen           # 289
+      - toast           # 305
+      - block           # 35 (Square/CashApp)
+      - creditkarma     # 61
+      - betterment      # 36
+      - clearstreet     # 48
+      - carta           # 86
+      - ripple          # 135
+      - fireblocks      # 80
+      - alloy           # 14
+      - forter          # 50
+      - riskified       # 26
+      - payoneer        # 143
+      # Quant / Finance (NYC)
+      - janestreet      # 230
+      - point72         # 272
+      - iex             # 10
+      # AI / ML (new)
+      - deepmind        # 102
+      - runwayml        # 37
+      # Data Infrastructure
+      - fivetran        # 174
+      - hightouch       # 56
+      - clickhouse      # 166
+      - neo4j           # 48
+      - amplitude       # 52
+      - mixpanel        # 48
+      # DevOps / Observability
+      - grafanalabs     # 142
+      - newrelic        # 41
+      - cribl           # 74
+      - pagerduty       # 43
+      - samsara         # 458
+      - okta            # 370
+      - rubrik          # 206
+      - launchdarkly    # 45
+      # Big Tech / Consumer (new)
+      - pinterest       # 122
+      - instacart       # 134
+      - airbnb          # 257
+      - gitlab          # 166
+      - asana           # 165
+      - duolingo        # 83
+      - intercom        # 203
+      - grammarly       # 67
+      - flexport        # 150
+      - opendoor        # 57
+      - calendly        # 26
+      - roblox          # 318
+      - waymo           # 420
+      # NYC / Healthtech
+      - oscar           # 266
+      - flatironhealth  # 15
+      - headway         # 86
+      - zocdoc          # 62
+      - cbinsights      # 8
+      - movableink      # 18
+      # Media
+      - thenewyorktimes # 138
+      - voxmedia        # 24
+      - axios           # 19
+
+  lever:
+    enabled: false
+    companies: []

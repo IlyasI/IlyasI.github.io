@@ -1,6 +1,7 @@
 node_modules/
 test-results/
 playwright-report/
+__pycache__/
 
 # LaTeX artifacts
 *.aux
@@ -178,10 +179,20 @@ Ilyas_Ibragimov_Resume_Datadog.pdf
 cover-datadog.tex
 cover-datadog.pdf
 Ilyas_Ibragimov_Cover_Letter_Datadog.pdf
+resume-langchain.tex
+resume-langchain.pdf
+Ilyas_Ibragimov_Resume_LangChain.pdf
+resume-dave.tex
+resume-dave.pdf
+Ilyas_Ibragimov_Resume_Dave.pdf
+resume-uber.tex
+resume-uber.pdf
+Ilyas_Ibragimov_Resume_Uber.pdf
 
 # Job search
 jobs/jd-*.txt
 jobs/.seen_jobs.json
+jobs/.tracked.json
 jobs/.env
 jobs/.search.log
 jobs/.jobwatch*.log

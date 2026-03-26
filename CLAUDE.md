@@ -62,3 +62,34 @@ Run `make test-ats` to execute the full ATS verification test suite (34 tests).
 | `make build-verify-cover-clear` | Build + verify CLEAR cover letter |
 | `make test-ats` | Run ATS verification test suite |
 | `make clean` | Remove LaTeX build artifacts |
+
+## Writing Style: Don't Sound Like AI
+When writing prose for the user (cover letters, application answers, LinkedIn posts, etc.):
+
+### Never use these words/phrases
+
+**Red flag words (AI uses these 10-180x more than humans):**
+"delve", "leverage", "utilize", "facilitate", "pivotal", "crucial", "paramount", "robust", "comprehensive", "cutting-edge", "streamline", "harness", "foster", "revolutionize", "game-changer", "unlock", "seamless", "showcasing", "aligns", "aims to", "surpassing", "impacting", "remarked", "realm", "tapestry", "synergy", "cognizant", "sentinel", "peril", "pertinent", "elevated", "proactive", "innovative", "supercharge", "future-proof", "unleash", "transform" (as buzzword), "optimize" (as buzzword), "enable", "powerful", "intuitive"
+
+**Red flag phrases:**
+"moreover", "furthermore", "additionally", "in conclusion", "in summary", "to sum up", "it's worth noting", "in today's fast-paced world", "I've got", "testament to", "plays a significant role in shaping", "not just X, but also Y", "the goal?", "the result?", "fundamentally", "I'm thrilled", "I'm passionate about", "deeply resonates", "at its core", "notable works include", "one should keep in mind", "aims to explore"
+
+### Never use em dashes
+Use commas, periods, or "and" instead.
+
+### Avoid AI structural patterns
+- No setup/explanation/lesson sandwich structure
+- No neat wrap-up or takeaway paragraph at the end
+- Don't make every sentence roughly the same length
+- Don't use formal transitions between every thought
+- Don't follow a rigid paragraph pattern
+- Don't over-qualify or hedge everything
+
+### Do
+- Use contractions
+- Vary sentence length (short ones mixed with longer ones)
+- Start sentences with "And", "But", "So" sometimes
+- Write how the user actually talks
+- Keep it slightly messy/imperfect, like a real person wrote it
+- Use simple common words ("use" not "utilize", "important" not "crucial")
+- If the user gives you their rough wording, preserve their voice and just clean it up

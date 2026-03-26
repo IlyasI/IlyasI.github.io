@@ -173,6 +173,15 @@ resume-datadog:
 cover-datadog:
 	pdflatex -jobname=Ilyas_Ibragimov_Cover_Letter_Datadog cover-datadog.tex
 
+resume-langchain:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_LangChain "\def\includephone{1}\input{resume-langchain.tex}"
+
+resume-dave:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_Dave "\def\includephone{1}\input{resume-dave.tex}"
+
+resume-uber:
+	pdflatex -jobname=Ilyas_Ibragimov_Resume_Uber "\def\includephone{1}\input{resume-uber.tex}"
+
 verify:
 	bash scripts/verify-resume-ats.sh resume.pdf resume.tex
 
